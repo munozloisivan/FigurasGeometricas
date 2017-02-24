@@ -1,7 +1,7 @@
 /**
  * Created by ivanm on 23/02/2017.
  */
-public class Triangulo implements Figura {
+public class Triangulo extends FiguraBasica {
 
     double base, altura;
 
@@ -13,4 +13,5 @@ public class Triangulo implements Figura {
     public double area() {
         return (base*altura)/2;
     }
+
 }

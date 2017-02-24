@@ -1,6 +1,7 @@
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,4 +33,10 @@ public class Implementador {
         }
         return res;
     }
-}
+
+    public List<Figura> listSorted () {
+        Collections.sort(figuraList,Collections.<Figura>reverseOrder());
+        return figuraList;
+    }
+
+    }

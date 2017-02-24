@@ -1,7 +1,7 @@
 /**
  * Created by ivanm on 23/02/2017.
  */
-public class Rectangulo implements Figura {
+public class Rectangulo extends FiguraBasica {
 
     double lado1, lado2;
 
@@ -13,4 +13,5 @@ public class Rectangulo implements Figura {
     public double area() {
         return (lado1*lado2);
     }
+
 }

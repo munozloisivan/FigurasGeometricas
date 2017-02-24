@@ -10,8 +10,10 @@ public class Main {
 
         BasicConfigurator.configure();                      //Estructura Logger
         final Logger logger = Logger.getLogger("main");
+        final Logger logList = Logger.getLogger("Orden figuras");
 
-        Figura fr = new Rectangulo(10,20);
+
+        Figura fr = new Rectangulo(10,20);     //optimizarlo
         Figura fc = new Circulo(5);
         Figura ft = new Triangulo(3,5);
         Figura fcu = new Cuadrado(4);
@@ -24,6 +26,10 @@ public class Main {
         double resultado = implem.sumAreas();
         logger.info("La suma de areas de las figuras es:" +resultado+"\n");
 
-
+        logList.info("Figuras ordenadas por area");
+        implem.listSorted();
+        for (int i=0; i< implem.figuraList.size(); i++){
+            System.out.println("Figura "+(i+1)+" : "+implem.figuraList.get(i).getClass().getSimpleName()+" --> Area: "+implem.figuraList.get(i).area());
+        }
     }
 }
