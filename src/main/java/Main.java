@@ -8,8 +8,8 @@ public class Main {
 
         Implementador implem = new Implementador();
 
-        //BasicConfigurator.configure();                      //Estructura Logger
-      //  final Logger logger = Logger.getLogger("main");
+        BasicConfigurator.configure();                      //Estructura Logger
+        final Logger logger = Logger.getLogger("main");
 
         Figura fr = new Rectangulo(10,20);
         Figura fc = new Circulo(5);
@@ -22,7 +22,7 @@ public class Main {
         implem.addFig(fcu);
 
         double resultado = implem.sumAreas();
-        System.out.println("La suma de areas de las figuras es:" +resultado);
+        logger.info("La suma de areas de las figuras es:" +resultado+"\n");
 
 
     }
